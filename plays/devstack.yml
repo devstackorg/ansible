@@ -2,6 +2,6 @@
   become: yes
   vars_files:
      - /etc/csp/boot_config/meta_data.json
-   roles:
-     - {  role: ~/ansible/roles/cicd, when: meta.vm_role == 'cicd' }
-     - {  role: ~/ansible/roles/binary, when: vm_role == 'binary' }
+  roles:
+     - {  role: ../roles/cicd, when: meta.vm_role == 'cicd' }
+     - {  role: ../roles/binary, when: vm_role == 'binary' }
