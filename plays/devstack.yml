@@ -4,4 +4,4 @@
      - /etc/csp/boot_config/metadata.json
   roles:
      - {  role: ../roles/cicd, when: meta.vm_role == 'cicd' }
-     - {  role: ../roles/binary, when: vm_role == 'binary' }
+     - {  role: ../roles/binary, when: meta.vm_role == 'binary' }
