@@ -1,7 +1,7 @@
 - hosts: localhost
   become: yes
   vars_files:
-     - /etc/csp/boot_config/meta_data.json
+     - /etc/csp/boot_config/metadata.json
   roles:
      - {  role: ../roles/cicd, when: meta.vm_role == 'cicd' }
      - {  role: ../roles/binary, when: vm_role == 'binary' }
