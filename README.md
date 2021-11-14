@@ -16,6 +16,6 @@ $cd ansible/
 
 $ansible-playbook plays/devstack.yml
 
-sh /etc/csp/boot_scripts/play-books.sh
+$sh /etc/csp/boot_scripts/play-books.sh
 
 
