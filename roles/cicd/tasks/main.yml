@@ -4,12 +4,25 @@
 #  become: true
 #  gather_facts: false
 #  tasks:
+    
+    - name: add epel repo
+      yum_repository:
+        name: epel
+        description: EPEL YUM repo
+        baseurl: https://dl.fedoraproject.org/pub/epel/$releasever/$basearch/
+    become: yes
+    
+    - name: yum install daemonize
+      yum:
+       name: daemonize
+       state: latest
+
     - name: install openjdk
       yum: name=java-1.8.0-openjdk-devel state=present
   
     - name: download Jenkins repo
       get_url: 
-          url: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+          url: http://pkg.jenkins.io/redhat-stable
           dest: /etc/yum.repos.d/jenkins.repo
 
   #  - name: import GPG key
