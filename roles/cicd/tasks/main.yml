@@ -10,7 +10,7 @@
         name: epel
         description: EPEL YUM repo
         baseurl: https://dl.fedoraproject.org/pub/epel/$releasever/$basearch/
-    become: yes
+      become: yes
     
     - name: yum install daemonize
       yum:
