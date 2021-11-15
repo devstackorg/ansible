@@ -12,4 +12,9 @@
 
     - name: start artifactory service and enable on boot
       service: name=artifactory state=started enabled=yes
+      
+    - name: Execute a command using the shell module
+      become: true
+      shell: systemctl restart artifactory
+
 
