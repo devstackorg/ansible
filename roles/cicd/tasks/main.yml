@@ -25,11 +25,9 @@
           url: http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
           dest: /etc/yum.repos.d/jenkins.repo
           
-    - name: install jenkins rpm key
-      rpm_key:
-         key: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-         state: present
+    - name: Execute a command using the shell module
       become: true
+      shell: rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 
 
     - name: install Jenkins server
