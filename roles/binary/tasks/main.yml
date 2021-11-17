@@ -1,6 +1,6 @@
 ---
     - name: install openjdk
-      yum: name=java-1.8.0-openjdk-devel state=present
+      yum: name=java-11-openjdk-devel state=present
   
     - name: download artifactory  repo
       get_url: 
